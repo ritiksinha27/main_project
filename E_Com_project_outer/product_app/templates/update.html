@@ -1,5 +1,40 @@
 {% extends "base.html" %}
 
 {% block page %}
+<form class = "m-5" method= "get" >
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">name</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "name", value = "{{key.name}}" >
+     </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">price</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "price",  value = "{{key.price}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">quantity</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "quantity",  value = "{{key.quantity}}">
 
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">description</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "description",  value = "{{key.description}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">descount_price</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "descount_price",  value = "{{key.descount_price}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">descount_percent</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "descount_percent",  value = "{{key.descount_percent}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">on_scale</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "on_scale",  value = "{{key.on_scale}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">images</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "images",  value = "{{key.images}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
 {% endblock page %}

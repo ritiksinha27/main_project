@@ -48,3 +48,8 @@ def up_a(request, id):
             return redirect('pro_home')
         
     return render(request, 'pro_home.html', {'key' : a})
+
+def card(request, id ):
+    a = product_details.objects.get(pk = id)
+    return redirect('pro.html')
+    

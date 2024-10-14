@@ -7,7 +7,7 @@ class custom_user(AbstractUser):
      username = None
      name = models.CharField(max_length = 50, unique = True)
      mobile = models.IntegerField()
-     email = models.CharField(max_length = 50)
+     email = models.CharField(max_length = 50, unique = True)
      address = models.CharField(max_length = 250)
      
      USERNAME_FIELD = 'name'
