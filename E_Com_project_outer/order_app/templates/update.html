@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block page %}
+<form class = "m-5" method= "get" >
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">order_no</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "order_no", value = "{{key.order_no}}" >
+     </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">user_id</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "user_id",  value = "{{key.user_id}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">product</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "product",  value = "{{key.product}}">
+
+      </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">total_prise</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "total_prise",  value = "{{key.total_prise}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">payment</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "payment",  value = "{{key.payment}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">shypping_address</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "shypping_address",  value = "{{key.shypping_address}}">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">order_status</label>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name = "order_status",  value = "{{key.order_status}}">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock page %}

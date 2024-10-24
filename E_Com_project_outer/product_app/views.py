@@ -50,6 +50,5 @@ def up_a(request, id):
     return render(request, 'pro_home.html', {'key' : a})
 
 def card(request, id ):
-    a = product_details.objects.get(pk = id)
+    a = product_details.objects.get(pk = id, null = True, blank = True)
     return redirect('pro.html')
-    

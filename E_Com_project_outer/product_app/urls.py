@@ -5,5 +5,5 @@ urlpatterns = [
     path('', pro_home, name = 'pro_home'), 
     path('del/<int:id>', del_a, name= 'delete'),
     path('update/<int:id>', up_a, name = 'update'),
-    path('cart/<int:id>', card,  name = 'cart'),
+    path('cart/<int:id>', card,  name = 'cart')
 ]
