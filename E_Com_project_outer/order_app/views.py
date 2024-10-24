@@ -41,3 +41,7 @@ def ord_update(request , id):
             data.save()
             return redirect('home')
     return render(request, 'index.html', {'key' : data})
+
+def card(request, id ):
+    a = order_details.objects.get(pk = id, null = True, blank = True)
+    return redirect('ord.html')
