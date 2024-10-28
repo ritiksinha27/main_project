@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from order_app.models import order_details
+from .models import order_details
 # Create your views here.
 
 def ord_view(request):

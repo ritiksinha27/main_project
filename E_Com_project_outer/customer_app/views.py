@@ -4,15 +4,18 @@ from django.contrib.auth import authenticate,login,logout
 from django.contrib import messages
 from django.contrib.auth.models import User
 from customer_app.models import custom_user
+from .form import UserAddForm
 # Create your views here.
 
 def home(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserAddForm(request.POST) #need to create new form for custom user model as the old form of djagno user model cannot be used here .. I have created in the forms.py and caleld it from there
         if form.is_valid():
             form.save()
+            #we need to redierct the page to success page using redirect 
+            return redirect('home')
     else:
-        form = UserCreationForm()
+        form = UserAddForm()
     return render(request, 'home.html', {"form":form})
 #for registration
 def registration(request):
